@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>pleazn scents</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      background:#050505;
+      color:#f4e7cf;
+      font-family:'Inter', sans-serif;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    /* NAVBAR */
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:35px 0;
+    }
+
+    .logo{
+      font-size:32px;
+      letter-spacing:4px;
+      font-family:'Cormorant Garamond', serif;
+      color:#c6a26b;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:40px;
+    }
+
+    .nav-links a{
+      text-decoration:none;
+      color:#ddd;
+      font-size:15px;
+      transition:0.3s;
+      position:relative;
+    }
+
+    .nav-links a:hover,
+    .nav-links .active{
+      color:#fff;
+    }
+
+    .nav-links .active::after{
+      content:'';
+      position:absolute;
+      left:0;
+      bottom:-8px;
+      width:100%;
+      height:1px;
+      background:#fff;
+    }
+
+    /* HERO TEXT */
+    .hero{
+      text-align:center;
+      padding:60px 0;
+    }
+
+    .hero small{
+      letter-spacing:6px;
+      color:#b08b57;
+      font-size:14px;
+    }
+
+    .hero h1{
+      font-family:'Cormorant Garamond', serif;
+      font-size:70px;
+      font-weight:400;
+      margin-top:15px;
+      color:white;
+    }
+
+    /* PRODUCTS */
+    .products{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:35px;
+      padding-bottom:80px;
+      text-align: center;
+    }
+
+    .card{
+      background:#090909;
+    }
+
+    .image-box{
+      height:320px;
+      border:1px solid rgba(255,255,255,0.06);
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      margin-bottom:25px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .brown{
+      background:linear-gradient(
+        135deg,
+        #1a130d,
+        #24170f,
+        #120f0c
+      );
+    }
+
+    .blue{
+      background:linear-gradient(
+        135deg,
+        #0b1120,
+        #0d1833,
+        #0b0d17
+      );
+    }
+
+    /* Perfume Bottle */
+    .bottle{
+      width:48px;
+      height:90px;
+      border:2px solid #c8a26c;
+      border-radius:10px;
+      position:relative;
+    }
+
+    .bottle::before{
+      content:'';
+      position:absolute;
+      top:-18px;
+      left:50%;
+      transform:translateX(-50%);
+      width:18px;
+      height:18px;
+      border:2px solid #c8a26c;
+      border-bottom:none;
+      border-radius:4px 4px 0 0;
+    }
+
+    .card h2{
+      font-family:'Cormorant Garamond', serif;
+      font-size:42px;
+      font-weight:400;
+      margin-bottom:10px;
+      color:#f6f1e7;
+    }
+
+    .notes{
+      color:#9e9e9e;
+      margin-bottom:22px;
+      font-size:15px;
+    }
+
+    .price-btn{
+      display:inline-block;
+      padding:14px 24px;
+      border:1px solid #b48a54;
+      color:#d8b17d;
+      text-decoration:none;
+      font-size:15px;
+      border-radius:4px;
+      transition:0.3s;
+    }
+
+    .price-btn:hover{
+      background:#b48a54;
+      color:black;
+    }
+
+    footer{
+      border-top:1px solid rgba(255,255,255,0.06);
+      text-align:center;
+      padding:30px 0;
+      color:#777;
+      font-size:14px;
+    }
+
+    @media(max-width:768px){
+
+      .hero h1{
+        font-size:48px;
+      }
+
+      nav{
+        flex-direction:column;
+        gap:25px;
+      }
+
+      .nav-links{
+        gap:20px;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- NAVBAR -->
+    <nav>
+      <div class="logo">PLEAZN SCENTS</div>
+
+      <div class="nav-links">
+        <a href="Home.html">Home</a>
+        <a href="collection.html" class="active">Collection</a>
+        <a href="others.html">Other Scents</a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <small>OUR SIGNATURES</small>
+      <h1>The Secret Collections</h1>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="products">
+
+      <!-- CARD 1 -->
+      <div class="card">
+
+        <div class="image-box brown">
+          <div class="bottle"></div>
+        </div>
+
+        <h2>Bushra Gold</h2>
+
+        <p class="notes">
+          Premium Perfume Oil
+        </p>
+
+        <a 
+  href="https://wa.me/2349138325324?text=Hello%20Pleazn%20Scents,%20I%20need%20Bushra%20perfume%20oil."
+  class="price-btn"
+  target="_blank"
+>
+  N1k — N10k
+</a>
+
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="card">
+
+        <div class="image-box blue">
+          <div class="bottle"></div>
+        </div>
+
+        <h2>Mausuf Royal</h2>
+        
+        <p class="notes">
+          Luxury Arabian Oil
+        </p>
+
+       <a 
+  href="https://wa.me/2349138325324?text=Hello%20Pleazn%20Scents,%20I%20need%20Mausuf%20perfume%20oli."
+  class="price-btn"
+  target="_blank"
+>
+  N1k — N10k 
+</a>
+
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="card">
+
+        <div class="image-box brown">
+          <div class="bottle"></div>
+        </div>
+
+        <h2>Amir Oud</h2>
+
+        <p class="notes">
+          Long Lasting Oud Oil
+        </p>
+
+       <a 
+  href="https://wa.me/2349138325324?text=Hello%20Pleazn%20Scents,%20I%20need%20Amir%20Oud%20perfume%20oli."
+  class="price-btn"
+  target="_blank"
+>
+  N1k — N10k
+</a>
+
+      </div>
+
+    </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 PLEAZN SCENTS. All rights reserved.
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pleazn Scents</title>
+  
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: 'Georgia', serif;
+    }
+
+    body{
+      background:#050505;
+      color:#f5e6d3;
+    }
+
+    header{
+      width:100%;
+      padding:30px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:fixed;
+      top:0;
+      left:0;
+      z-index:1000;
+      background:rgba(0,0,0,0.4);
+      backdrop-filter: blur(5px);
+    }
+
+    .logo{
+      font-size:32px;
+      letter-spacing:5px;
+      color:#c89b5f;
+    }
+
+    nav a{
+      color:#ddd;
+      text-decoration:none;
+      margin-left:35px;
+      font-size:18px;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#c89b5f;
+    }
+
+    .hero{
+      height:100vh;
+      background:
+      linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+      url('IMG_0101.webp');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:20px;
+    }
+
+    .hero-content{
+      max-width:900px;
+    }
+
+    .hero-content h4{
+      color:#c89b5f;
+      letter-spacing:6px;
+      margin-bottom:20px;
+      font-weight:normal;
+    }
+
+    .hero-content h1{
+      font-size:75px;
+      margin-bottom:25px;
+      font-weight:400;
+    }
+
+    .hero-content p{
+      font-size:22px;
+      color:#d4c6b8;
+      line-height:1.7;
+      margin-bottom:40px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:18px 45px;
+      border:1px solid #c89b5f;
+      color:#c89b5f;
+      text-decoration:none;
+      font-size:18px;
+      transition:0.4s;
+    }
+
+    .btn:hover{
+      background:#c89b5f;
+      color:#000;
+    }
+
+    .about{
+      padding:120px 10%;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:60px;
+      align-items:center;
+    }
+
+    .about img{
+      width:100%;
+      border:1px solid #3d2b1f;
+    }
+
+    .about-text h2{
+      font-size:50px;
+      margin-bottom:20px;
+      color:#c89b5f;
+    }
+
+    .about-text p{
+      font-size:20px;
+      line-height:1.8;
+      color:#ccc;
+    }
+
+    .collection{
+      padding:100px 10%;
+      text-align:center;
+    }
+
+    .collection h2{
+      font-size:55px;
+      color:#c89b5f;
+      margin-bottom:50px;
+    }
+
+    .products{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:#111;
+      padding:20px;
+      border:1px solid #2a2a2a;
+      transition:0.4s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      border-color:#c89b5f;
+    }
+
+    .card img{
+      width:100%;
+      height:320px;
+      object-fit:cover;
+    }
+
+    .card h3{
+      margin-top:20px;
+      font-size:28px;
+      color:#f5e6d3;
+    }
+
+    .card p{
+      color:#c89b5f;
+      margin-top:10px;
+      font-size:20px;
+    }
+
+    footer{
+      text-align:center;
+      padding:30px;
+      border-top:1px solid #222;
+      color:#888;
+      font-size:18px;
+    }
+
+    @media(max-width:900px){
+
+      .hero-content h1{
+        font-size:48px;
+      }
+
+      .about{
+        grid-template-columns:1fr;
+      }
+
+      nav{
+        display:none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">PLEAZN SCENTS</div>
+
+    <nav>
+      <a href="Home.html">Home</a>
+      <a href="collection.html">Collection</a>
+      <a href="others.html">Other Scents</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h4>Every spray is pure confidence</h4>
+
+      <h1>Elegance beyond sight.</h1>
+
+      <p>
+        Every scent tells a story — created from carefully selected ingredients and blended with passion to leave a lasting impression wherever you go.
+      </p>
+
+      <a href="collection.html" class="btn">Explore Collection →</a>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT SECTION -->
+
+  <section class="about">
+
+    <img src="side.jpeg" alt="Perfume">
+
+    <div class="about-text">
+
+      <h2>Scent as Memory</h2>
+
+      <p>
+        We believe fragrance is a powerful reflection of personality and style. Our expert perfumers carefully select rare ingredients from around the world, combining timeless artistry with modern creativity to craft scents that leave a lasting impression and tell your unique story.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- COLLECTION -->
+
+<section class="collection">
+  
+  <h2>Luxury Oil Collection</h2>
+  
+  <div class="products">
+    
+    <div class="card">
+      <img src="bush.jpeg" alt="">
+      <h3>Bushra Gold</h3>
+      <p>Premium Perfume Oil</p>
+    </div>
+    
+    <div class="card">
+      <img src="mau.jpeg" alt="">
+      <h3>Mausuf Royal</h3>
+      <p>Long Lasting Oud Oil</p>
+    </div>
+    
+    <div class="card">
+      <img src="Amir.jpeg" alt="">
+      <h3>Amir Oud</h3>
+      <p>Long Lasting Oud Oil</p>
+    </div>
+    
+    <div class="card">
+      <img src="oil.jpeg" alt="">
+      <h3>And More..</h3>
+      <p>Exclusive Scent Oil</p>
+    </div>
+    
+  </div>
+  
+</section>
+
+  <footer>
+    © 2026 PLEAZN SCENTS. All rights reserved.
+  </footer>
+
+</body>
+</html>

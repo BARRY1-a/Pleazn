@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Pleazn Scents</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#050505;
+  color:#f3e7d2;
+  font-family:'Inter', sans-serif;
+}
+
+.container{
+  width:90%;
+  max-width:1100px;
+  margin:auto;
+}
+
+/* NAVBAR */
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:35px 0;
+}
+
+.logo{
+  font-size:32px;
+  letter-spacing:4px;
+  font-family:'Cormorant Garamond', serif;
+  color:#c7a26a;
+}
+
+.nav-links{
+  display:flex;
+  gap:40px;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:#ddd;
+  position:relative;
+  transition:0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active{
+  color:white;
+}
+
+.nav-links .active::after{
+  content:'';
+  position:absolute;
+  left:0;
+  bottom:-8px;
+  width:100%;
+  height:1px;
+  background:white;
+}
+
+/* HERO */
+
+.hero{
+  text-align:center;
+  padding:70px 0 50px;
+}
+
+.hero small{
+  color:#b08a57;
+  letter-spacing:6px;
+  font-size:14px;
+}
+
+.hero h1{
+  font-family:'Cormorant Garamond', serif;
+  font-size:68px;
+  font-weight:400;
+  margin:15px 0;
+  color:white;
+}
+
+.hero p{
+  max-width:700px;
+  margin:auto;
+  line-height:1.7;
+  color:#9f9f9f;
+  font-size:18px;
+}
+
+/* FORM */
+
+.form-box{
+  margin-top:50px;
+  background:linear-gradient(
+    135deg,
+    rgba(42,25,12,0.95),
+    rgba(20,12,8,0.95)
+  );
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  padding:45px;
+  border-radius:6px;
+}
+
+.form-group{
+  margin-bottom:30px;
+}
+
+label{
+  display:block;
+  margin-bottom:12px;
+  color:#d7b27e;
+  font-size:16px;
+}
+
+input,
+textarea,
+select{
+  width:100%;
+  padding:18px;
+  background:transparent;
+  border:1px solid rgba(255,255,255,0.12);
+  color:white;
+  font-size:16px;
+  outline:none;
+  border-radius:4px;
+}
+
+textarea{
+  min-height:140px;
+  resize:vertical;
+}
+
+input::placeholder,
+textarea::placeholder{
+  color:#777;
+}
+
+/* BUTTON */
+
+.submit-btn{
+  background:transparent;
+  border:1px solid #b78b57;
+  color:#d6b17f;
+  padding:16px 30px;
+  font-size:16px;
+  cursor:pointer;
+  border-radius:4px;
+  transition:0.3s;
+}
+
+.submit-btn:hover{
+  background:#b78b57;
+  color:black;
+}
+
+/* FOOTER */
+
+footer{
+      border-top:1px solid rgba(255,255,255,0.06);
+      text-align:center;
+      padding:30px 0;
+      color:#777;
+      font-size:14px;
+    }
+
+
+@media(max-width:768px){
+
+  nav{
+    flex-direction:column;
+    gap:20px;
+  }
+
+  .hero h1{
+    font-size:48px;
+  }
+
+  .form-box{
+    padding:25px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- NAVBAR -->
+
+  <nav>
+
+    <div class="logo">
+      PLEAZN SCENTS
+    </div>
+
+    <div class="nav-links">
+      <a href="Home.html">Home</a>
+      <a href="collection.html">Collection</a>
+      <a href="others.html" class="active">Other Scents</a>
+    </div>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <small>CUSTOM ORDERS</small>
+
+    <h1>Other Scents</h1>
+
+    <p>
+      Didn’t find what you’re looking for?
+      Request a custom fragrance or let us know
+      about your preferred scent profile.
+    </p>
+
+  </section>
+  
+  <!-- FORM -->
+
+  <div class="form-box">
+<form>
+
+  <div class="form-group">
+    <label>Your Name</label>
+
+    <input
+      type="text"
+      id="name"
+      placeholder="Enter your name"
+    >
+  </div>
+
+  <div class="form-group">
+    <label>Favourite Notes</label>
+
+    <input
+      type="text"
+      id="favorite"
+      placeholder="e.g. Vanilla, Oud, Rose"
+    >
+  </div>
+
+  <div class="form-group">
+    <label>Scent Profile</label>
+
+    <select id="scent">
+
+      <option>Fresh</option>
+      <option>Woody</option>
+      <option>Sweet</option>
+      <option>Floral</option>
+      <option>Luxury Oud</option>
+      <option>Smoky</option>
+
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Additional Details</label>
+
+    <textarea
+      id="details"
+      placeholder="Describe your ideal fragrance..."
+    ></textarea>
+  </div>
+
+  <!-- BUTTON -->
+
+
+</form>
+
+<script>
+
+function sendToWhatsApp(){
+
+  let name =
+    document.getElementById("name").value;
+
+  let favorite =
+    document.getElementById("favorite").value;
+
+  let scent =
+    document.getElementById("scent").value;
+
+  let details =
+    document.getElementById("details").value;
+
+  let message =
+`Hello Pleasant Scents,
+
+I want a custom fragrance.
+
+Name: ${name}
+
+Favourite Notes: ${favorite}
+
+Scent Profile: ${scent}
+
+Additional Details:
+${details}`;
+
+  let phoneNumber = "23490138325324";
+
+  let url =
+`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+  window.open(url, "_blank");
+
+}
+
+</script>
+
+<button onclick="sendWhatsApp()" class="submit-btn">
+  Submit Request
+</button>
+
+
+<script>
+
+function sendWhatsApp() {
+
+  let name =
+    document.getElementById("name").value;
+
+  let favorite =
+    document.getElementById("favorite").value;
+
+  let scent =
+    document.getElementById("scent").value;
+
+  let details =
+    document.getElementById("details").value;
+
+  let message =
+`Hello Pleasant Scents,
+
+I want a custom fragrance.
+
+Name: ${name}
+
+Favourite Notes: ${favorite}
+
+Scent Profile: ${scent}
+
+Additional Details:
+${details}`;
+
+  let url =
+`https://wa.me/2349138325324?text=${encodeURIComponent(message)}`;
+
+  window.location.href = url;
+
+}
+
+</script>
+
+
+    <!-- FOOTER -->
+    <footer>
+      © 2026 PLEAZN SCENTS. All rights reserved.
+    </footer>
+
+</body>
+</html>
